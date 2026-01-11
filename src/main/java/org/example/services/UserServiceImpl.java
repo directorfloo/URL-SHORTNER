@@ -8,12 +8,16 @@ import org.example.dtos.responses.RegisterUserResponse;
 import org.example.dtos.responses.UserSignInResponse;
 import org.example.exceptions.InvalidCredentials;
 import org.example.utils.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import static org.example.utils.UserMapper.mapRegisterUse;
 import static org.example.utils.UserMapper.mapSignInUser;
-
+@Service
 public class UserServiceImpl implements UserService{
 
+
+    @Autowired
     private  UserRepository userRepository;
 
 
