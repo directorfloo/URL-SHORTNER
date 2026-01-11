@@ -16,6 +16,7 @@ public class UserMapper {
 }
 public static RegisterUserResponse mapRegisterUse(User savedUser) {
     RegisterUserResponse response = new RegisterUserResponse();
+    response.setMessage("Successfully Signed Up");
     response.setUserId(savedUser.getUserId());
     response.setEmail(savedUser.getEmail());
     return response;
